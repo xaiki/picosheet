@@ -1,4 +1,10 @@
 'use strict;'
+let  fetch
+try {
+  fetch = window.fetch
+} catch (e) {
+  fetch = require('node-fetch')
+}
 
 const buildGDocsURL = (key) => (
   `https://spreadsheets.google.com/feeds/list/${key}/od6/public/values?alt=json`
