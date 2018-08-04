@@ -6,7 +6,5 @@
   "repository": "https://github.com/xaiki/picosheet",
   "author": "Niv Sardi <x@btn.sh>",
   "license": "AGPL3",
-  "dependencies": {
-    "axios": "^0.18.0"
-  }
+  "dependencies": {}
 }
