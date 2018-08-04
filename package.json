@@ -2,11 +2,30 @@
   "name": "picosheet",
   "version": "0.0.3",
   "description": "A small library to get json endpoint of google sheets",
-  "main": "index.js",
+  "main": "./build/",
+  "module": "./src/",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
   "repository": "https://github.com/xaiki/picosheet",
   "author": "Niv Sardi <x@btn.sh>",
   "license": "AGPL3",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "node-fetch": "^2.2.0"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "prepublishOnly": "npm run build",
   }
 }
